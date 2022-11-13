@@ -8,7 +8,7 @@ _BUTTON_C_PIN = const(37)
 m5button = Button()
 buttonA = m5button.register(_BUTTON_A_PIN)
 buttonB = m5button.register(_BUTTON_B_PIN)
-buttonC = m5button.register(_BUTTON_C_PIN)
+buttonC = m5button.register(_BUTTON_C_PIN) # M5-knappen!
 
 while True:
   if buttonC.wasPressed():
