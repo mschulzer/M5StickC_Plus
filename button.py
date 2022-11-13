@@ -12,4 +12,4 @@ buttonC = m5button.register(_BUTTON_C_PIN)
 
 while True:
   if buttonC.wasPressed():
-    print("Hello")
+    print("Hello, World!")
