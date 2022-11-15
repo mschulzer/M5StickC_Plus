@@ -12,6 +12,6 @@ display = st7789.ST7789(spi, 135, 240, rotation=3, reset=machine.Pin(18, machine
 display.init()
 
 display.fill(st7789.WHITE)
-display.text(font, "Hello, World!", 50, 80, 0x000000, 0xFFFFFF)
+display.text(font, "Hello, World!", 50, 80, st7789.BLACK, st7789.WHITE)
 
 spi.deinit()
