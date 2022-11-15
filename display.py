@@ -3,6 +3,9 @@ import st7789
 import axp192
 import vga1_8x16 as font
 
+WHITE = st7789.WHITE
+BLACK = st7789.BLACK
+
 i2c = machine.I2C(0, sda=machine.Pin(21), scl=machine.Pin(22), freq=400000)
 pmu = axp192.AXP192(i2c, board=axp192.M5StickCPlus)
 
@@ -11,7 +14,7 @@ display = st7789.ST7789(spi, 135, 240, rotation=3, reset=machine.Pin(18, machine
 
 display.init()
 
-display.fill(st7789.WHITE)
-display.text(font, "Hello, World!", 50, 80, st7789.BLACK, st7789.WHITE)
+display.fill(WHITE)
+display.text(font, "Hello, World!", 50, 80, BLACK, WHITE)
 
 spi.deinit()
