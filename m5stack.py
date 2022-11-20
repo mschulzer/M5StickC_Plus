@@ -45,3 +45,6 @@ class Speaker:
 
   def volume(self, val):
     self._volume = val
+
+    
+speaker = Speaker()
